@@ -1,4 +1,4 @@
-export default function CityInput({onChange, onClick}){
+export default function CityInput({onChange, onClick, onKeyDown}){
     return (
         <div id='cityContainer'>
             <input 
@@ -6,6 +6,7 @@ export default function CityInput({onChange, onClick}){
             id='cityInput'
             placeholder='Enter a city...'
             onChange={onChange}
+            onKeyDown={onKeyDown}
             />
             <button
             onClick={onClick}

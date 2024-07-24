@@ -22,8 +22,13 @@ function App() {
     fetchWeather();
   }
 
+  function handleKeyDown(e){
+    if(query && e.key === 'Enter'){
+      fetchWeather();
+    }
+  }
+
   const fetchWeather = async () =>  {
-    console.log(query);
     setLoading(true);
     setError(null)
     try {
@@ -47,9 +52,10 @@ function App() {
       <CityInput
         onChange={handleChange}
         onClick={handleClick}
+        onKeyDown={handleKeyDown}
        />
-       {loading && <p>Loading...</p>}
-       {error && <p style={{color:'red'}}>Error: {error}</p>}
+       {loading && <p style={{'textAlign':'center'}}>Loading...</p>}
+       {error && <p style={{color:'red', textAlign:'center'}}>Error: {error}</p>}
       <ForecastBox 
         weather={weather}
       />
