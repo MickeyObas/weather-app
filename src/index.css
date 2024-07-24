@@ -6,20 +6,31 @@
 }
 
 body{
-background-color: lightblue;
-height: 100vh;
+background-color: rgb(173, 216, 230);
+max-height: 100vh;
 }
 
 #cityContainer{
   display: flex;
   justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+#cityContainer button{
+  border-radius: 25px;
+  padding: 4px 7px;
+  border: none;
+  cursor: pointer;
+  height: 40px;
+  margin-left: 7.5px;
+  background-color: rgb(115, 211, 243) ;
 }
 
 #cityInput{
   border-radius: 25px;
   padding: 10px;
   width: 35%;
-  margin-top: 20px;
   outline: none;
   border: none;
 }
@@ -37,7 +48,7 @@ height: 100vh;
   background-color: #ffffff;
   opacity: 0.6;
   box-shadow: 0 3px 10px rgba(0,0,0,0.2);
-  margin-top: 30px;
+  margin-top: 25px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -54,7 +65,8 @@ height: 100vh;
   height: 350px;
 }
 
-#forecastDetails{
+#forecastDetails > div{
+  display: flex;
   flex-direction: column;
   gap: 12px;
 }
@@ -66,6 +78,7 @@ height: 100vh;
 }
 
 #forecastIcon img{
+  height: 70%;
   max-height: 70%;
 }
 
